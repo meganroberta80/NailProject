@@ -18,6 +18,14 @@ app.use(express.static('public'))
 app.use('/nails', nailController)
 
 
+/////// Routes ///////
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+})
+
+
+
+
 ///////////// Start the Server ///////////// 
 app.listen(PORT, () => {
     console.log(`Your server is running on localhost:${PORT} 🚀`);

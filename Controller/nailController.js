@@ -5,40 +5,66 @@ const db = require('../models/index.js');
 const router = express.Router();
 
 
-// Home Page
-// Ask Michael about this.
 
 
-// Service Selection Page
-// Index Route
+
+// Index Route (Service Selection Page)
 router.get('/', (req, res) => {
     db.Nails.find({}, (err, allNails) => {
-        if (err) return console.log(err)
-
-        res.render('index.ejs', {
+        if (err) return console.log(err);
+        
+        
+        res.render('NailsRus/nailsIndex.ejs', {
             allNails: allNails
-        })
+    });
     })
 })
 
-// Create Appointment Page
-// New Route
-// Show buttons 
-// Book appointment route
+
+// New Route (Create Appointment Page)
 router.get('/new', (req, res) => {
-    res.render('Nails/nailsNew.ejs')
+    res.render('NailsRus/nailsNew.ejs')
 })
 
 router.get('/new/:nailService', (req, res) => {
-    res.render('Nails/nailsBook.ejs', { nailService: req.params.nailService })
+    res.render('NailsRus/nailsBook.ejs', { nailService: req.params.nailService })
 })
 
-// Confirmation Page
-// Show Route
+
+// Show Route (Confirmation Page)
+router.get('/:nailId', (req, res) => {
+    db.Nails.findById(req.params.nailId, (err, foundNail) => {
+        if (err) return console.log(err);
+        
+        
+        res.render('show.ejs', { oneNail: foundNail })
+    })
+})
+
+// Create Route //
+router.post('/', (req, res) => {
+    db.Nails.create(req.body, (err, createdNails) => {
+        if (err) return console.log(err);
+        
+        //console.log(req.body)
+        
+        res.redirect('NailsRus/nailsIndex');
+    });
+})
 
 
-// Edit Appointment Page
-// Edit Route (link/button)
+// Edit Route (Edit Appointment Page)
+router.get('/:nailId/edit', (req, res) => {
+    db.Nails.findById(req.params.nailId, (err, foundNail) => {
+        if (err) return console.log(err);
+
+        res.render('edit.ejs', { oneNail: foundNail });
+    })
+})
+
+
+
+
 
 // Update Route
 
