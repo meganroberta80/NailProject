@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
         
         //console.log(req.body)
         
-        res.redirect('NailsRus/nailsIndex');
+        res.redirect('/nails');
     });
 })
 
@@ -58,7 +58,7 @@ router.get('/:nailId/edit', (req, res) => {
     db.Nails.findById(req.params.nailId, (err, foundNail) => {
         if (err) return console.log(err);
 
-        res.render('edit.ejs', { oneNail: foundNail });
+        res.render('NailsRus/nailsedit.ejs', { oneNail: foundNail });
     })
 })
 
@@ -67,8 +67,22 @@ router.get('/:nailId/edit', (req, res) => {
 
 
 // Update Route
-
+router.put('/:nailId', (req, res) => {
+    db.Nails.findByIdAndUpdate(req.params.nailId, req.body, (err, updateNail) => {
+        if (err) return console.log(err);
+        
+        res.redirect('/nails/' + req.params.nailId);
+    })
+})
 
 // Delete Route (link/button)
+
+router.delete('/:nailId',(req, res) => {
+    db.Nails.findByIdAndDelete(req.params.nailId, (err) => {
+        if (err) return console.log(err);
+        res.redirect('/nails');
+    })
+    
+})
 
 module.exports = router;
