@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 // The Schema
 const nailSchema = new mongoose.Schema({
+    service: { type: String, required: true },
     name: { type: String, required: true },
     color: { type: String },
     shape: { type: String },
@@ -10,6 +11,6 @@ const nailSchema = new mongoose.Schema({
 })
 
 // The Model
-const Nails = mongoose.model('Nails', nailsSchema)
+const Nails = mongoose.model('Nails', nailSchema)
 
 module.exports = Nails

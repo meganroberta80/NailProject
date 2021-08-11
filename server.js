@@ -1,6 +1,7 @@
 const express = require('express')
 const methodOverride = require('method-override')
 const rowdy = require('rowdy-logger')
+const nailController = require('./controller/nailController.js')
 
 ///////////// Configuration ///////////// 
 const app = express()
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
 
 ///////////// Controllers ///////////// 
+app.use('/nails', nailController)
 
 
 ///////////// Start the Server ///////////// 
