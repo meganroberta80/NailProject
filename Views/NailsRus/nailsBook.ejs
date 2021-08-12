@@ -1,21 +1,25 @@
 <!-- Form goes here  -->
+<%- include('../partials/logobar.ejs') %>
 <h1>Create a New Nail Appointment for <%= nailService %></h1>
     <form action="/nails" method="POST">
         <label for="name">Name:</label>
         <input name="name" type="text">
         <br>
-        <label for="color">Color:</label>
-        <input name="color" type="text">
-        <br>
-        <label for="shape">Shape:</label>
-        <input name="shape" type="text">
-        <br>
+
         <label for="date">Date:</label>
         <input name="date" type="text">
         <br>
         <label for="time">Time:</label>
         <input name="time" type="text">
         <br>
+
+        <label for="color">Color:</label>
+        <input name="color" type="text">
+        <br>
+        <label for="shape">Shape:</label>
+        <input name="shape" type="text">
+        <br>
+        
         <input type="submit" value="Book Appointment">
 
         <input name="service" type="hidden" value="<%= nailService %>">
