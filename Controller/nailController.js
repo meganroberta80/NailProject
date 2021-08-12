@@ -5,9 +5,6 @@ const db = require('../models/index.js');
 const router = express.Router();
 
 
-
-
-
 // Index Route (Service Selection Page)
 router.get('/', (req, res) => {
     db.Nails.find({}, (err, allNails) => {
@@ -41,6 +38,7 @@ router.get('/:nailId', (req, res) => {
     })
 })
 
+
 // Create Route //
 router.post('/', (req, res) => {
     db.Nails.create(req.body, (err, createdNails) => {
@@ -63,9 +61,6 @@ router.get('/:nailId/edit', (req, res) => {
 })
 
 
-
-
-
 // Update Route
 router.put('/:nailId', (req, res) => {
     db.Nails.findByIdAndUpdate(req.params.nailId, req.body, (err, updateNail) => {
@@ -75,8 +70,8 @@ router.put('/:nailId', (req, res) => {
     })
 })
 
-// Delete Route (link/button)
 
+// Delete Route (link/button)
 router.delete('/:nailId',(req, res) => {
     db.Nails.findByIdAndDelete(req.params.nailId, (err) => {
         if (err) return console.log(err);
