@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
 const rowdy = require('rowdy-logger')
@@ -27,7 +28,7 @@ app.get('/', (req, res) => {
 
 
 ///////////// Start the Server ///////////// 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Your server is running on localhost:${PORT} 🚀`);
     rowdyResults.print()
   })
