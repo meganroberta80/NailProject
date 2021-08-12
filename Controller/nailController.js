@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         if (err) return console.log(err);
         
         
-        res.render('nailsRus/nailsIndex.ejs', {
+        res.render('nailsRUs/nailsIndex.ejs', {
             allNails: allNails
     });
     })
@@ -20,11 +20,11 @@ router.get('/', (req, res) => {
 
 // New Route (Create Appointment Page)
 router.get('/new', (req, res) => {
-    res.render('nailsRus/nailsNew.ejs')
+    res.render('nailsRUs/nailsNew.ejs')
 })
 
 router.get('/new/:nailService', (req, res) => {
-    res.render('nailsRus/nailsBook.ejs', { nailService: req.params.nailService })
+    res.render('nailsRUs/nailsBook.ejs', { nailService: req.params.nailService })
 })
 
 
@@ -56,7 +56,7 @@ router.get('/:nailId/edit', (req, res) => {
     db.Nails.findById(req.params.nailId, (err, foundNail) => {
         if (err) return console.log(err);
 
-        res.render('nailsRus/nailsedit.ejs', { oneNail: foundNail });
+        res.render('nailsRUs/nailsedit.ejs', { oneNail: foundNail });
     })
 })
 
