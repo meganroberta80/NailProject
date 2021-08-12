@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 
 ///////////// Start the Server ///////////// 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Your server is running on localhost:${PORT} 🚀`);
     rowdyResults.print()
   })
