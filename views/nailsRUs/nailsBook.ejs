@@ -1,27 +1,38 @@
-<!-- Form goes here  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat Appointment</title>
+</head>
+<body>
+    <!-- Form goes here  -->
 <%- include('../partials/logobar.ejs') %>
-    <h2>Create a New Nail Appointment for <%= nailService %>
-    </h2>
-    <form action="/nails" method="POST">
-        <label for="name">Name:</label>
-        <input name="name" type="text">
-        <br>
+<h2>Create a New Nail Appointment for <%= nailService %>
+</h2>
+<form action="/nails" method="POST">
+    <label for="name">Name:</label>
+    <input name="name" type="text">
+    <br>
 
-        <label for="date">Date:</label>
-        <input name="date" type="text">
-        <br>
-        <label for="time">Time:</label>
-        <input name="time" type="text">
-        <br>
+    <label for="date">Date:</label>
+    <input name="date" type="text">
+    <br>
+    <label for="time">Time:</label>
+    <input name="time" type="text">
+    <br>
 
-        <label for="color">Color:</label>
-        <input name="color" type="text">
-        <br>
-        <label for="shape">Shape:</label>
-        <input name="shape" type="text">
-        <br>
+    <label for="color">Color:</label>
+    <input name="color" type="text">
+    <br>
+    <label for="shape">Shape:</label>
+    <input name="shape" type="text">
+    <br>
 
-        <input type="submit" value="Book Appointment">
+    <input type="submit" value="Book Appointment">
 
-        <input name="service" type="hidden" value="<%= nailService %>">
-    </form>
+    <input name="service" type="hidden" value="<%= nailService %>">
+</form>
+</body>
+</html>

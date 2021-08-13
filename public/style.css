@@ -1,0 +1,21 @@
+body {
+    background-image: url(img/siteBackground.jpg);
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+/* p {
+    background-image: url(img/Nail\ Art.jpeg);
+    height: 600px;
+} */
+
+.card {
+    border: 1px solid black; 
+    text-align: center;
+}
