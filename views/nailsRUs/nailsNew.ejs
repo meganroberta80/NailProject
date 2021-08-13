@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/style.css">
     <title>Service Selection</title>
 </head>
-<body class="ss-page">
-    <div class="container">
 
-        <%- include('../partials/logobar.ejs') %>
-        
-        <div class="row">
-            <div class="col">
-                <h1>Service Selection</h1>
-                <p>Click on a service to create your appointment.</p>
+<body class="nails-new">
+    <%- include('../partials/logobar.ejs') %>
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <h1>Service Selection</h1>
+                    <p>Click on a service to create your appointment.</p>
+                </div>
             </div>
+
+            <div class="col">
+                <div id="pic1" class="nailpic"><a href="/nails/new/manicure">Manicure</a></div>
+                <div id="pic2" class="nailpic"><a href="/nails/new/pedicure">Pedicure</a></div>
+                <div id="pic3" class="nailpic"><a href="/nails/new/paint-change">Paint Change</a></div>
+                <div id="pic4" class="nailpic"><a href="/nails/new/full-set">Full Set</a></div>
+                <div id="pic5" class="nailpic"><a href="/nails/new/ombre">Ombre</a></div>
+                <div id="pic6" class="nailpic"><a href="/nails/new/dip">Dip</a></div>
+            </div>
+
         </div>
-        
-        <div class="col">
-            <div id="pic1" class="item"><a href="/nails/new/manicure">Manicure</a></div>
-            <div id="pic2" class="item"><a href="/nails/new/pedicure">Pedicure</a></div>
-            <div id="pic3" class="item" ><a href="/nails/new/paint-change">Paint Change</a></div>
-            <div id="pic4" class="item"><a href="/nails/new/full-set">Full Set</a></div>
-            <div id="pic5" class="item"><a href="/nails/new/ombre">Ombre</a></div>
-            <div id="pic6" class="item"><a href="/nails/new/dip">Dip</a></div>
-        </div>
-        
-        
-        
-        
-        
-        
-    </div>
-    </body>
-    </html>
+</body>
+
+</html>
