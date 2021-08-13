@@ -1,8 +1,11 @@
-body {
-    background-image: url(img/siteBackground.jpg);
+.ss-page {
+    background-image: url(img/marble04.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
-h2 {
+h1 {
     text-align: center;
 }
 
@@ -10,12 +13,60 @@ nav {
     text-align: center;
 }
 
-/* p {
-    background-image: url(img/Nail\ Art.jpeg);
-    height: 600px;
-} */
-
 .card {
     border: 1px solid black; 
     text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    align-items: center;
+    color: white;
+    
+  }
+
+#pic1 {
+    background-image: url(/img/Acrylic\ Nails\ 3.webp);
+    background-size: cover;
+   
+}
+
+#pic2 {
+    background-image: url(/img/nailarttoes.jpeg);
+    background-size: cover;
+   
+}
+
+#pic3 {
+    background-image: url(/img/nailart2.jpeg);
+    background-size: cover;
+   
+}
+
+#pic4 {
+    background-image: url(/img/nailart5.jpeg);
+    background-size: cover;
+   
+}
+
+
+#pic5 {
+    background-image: url(img/Acrylic\ Nails.webp);
+    background-size: cover;
+   
+}
+
+#pic6 {
+    background-image: url(img/nailart6.gif);
+    background-size: cover;
+   
 }

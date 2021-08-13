@@ -9,22 +9,34 @@
     <link rel="stylesheet" href="/style.css">
     <title>Service Selection</title>
 </head>
-<body>
+<body class="ss-page">
     <%- include('../partials/logobar.ejs') %>
 
-    <h2>Service Selection</h2>
-    <div>
-    <a href="/nails/new/manicure">Manicure</a>
-    <a href="/nails/new/pedicure">Pedicure</a>
-    <br>
-
-    <a href="/nails/new/paint-change">Paint Change</a> 
-    <a href="/nails/new/full-set">Full Set</a>
-    <br>
-    
-    <a href="/nails/new/ombre">Ombre</a>
-    <a href="/nails/new/dip">Dip</a>
+    <div class="header">
+        <h1>Service Selection</h1>
     </div>
+    
+    <div class="list">
+        <div id="pic1" class="item"><a href="/nails/new/manicure">Manicure</a></div>
+        <div id="pic2" class="item"><a href="/nails/new/pedicure">Pedicure</a></div>
+        <div id="pic3" class="item" ><a href="/nails/new/paint-change">Paint Change</a></div>
+    </div>
+    
+
+    <div>
+
+    </div>
+
+    
+    <div class="list">
+        <div id="pic4" class="item"><a href="/nails/new/full-set">Full Set</a></div>
+        <div id="pic5" class="item"><a href="/nails/new/ombre">Ombre</a></div>
+        <div id="pic6" class="item"><a href="/nails/new/dip">Dip</a></div>
+    </div>
+    
+
+
+  
 
 </body>
 </html>

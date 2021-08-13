@@ -13,7 +13,7 @@
 <body>
     <%- include('../partials/logobar.ejs') %>
 
-<h2>Edit <%= oneNail.service %> Appointment </h2>
+<h1>Edit <%= oneNail.service %> Appointment </h1>
 
 <form action="/nails/<%= oneNail._id %>?_method=PUT" method="POST">
     <label for="service">Service:</label>
@@ -36,6 +36,7 @@
     <br>
     <input type="submit" value="Update Appointment">
 </form>
+
     
 </body>
 </html>
