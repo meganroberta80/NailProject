@@ -8,11 +8,7 @@
   
     <%- include('../partials/logobar.ejs') %>
 
-    
-    
     <div class="banner-area"></div>
-    
-
         <div class="content-area">
             <div class="wrapper">
                 <h1>Create new appointment for a <%= nailService %></h1>
@@ -29,14 +25,12 @@
                         <label for="time">Time:</label>
                         <input name="time" type="text">
                         <br>
-                        
-                        <label for="color">Color:</label>
-                        <input name="color" type="text">
-                        <br>
                         <label for="shape">Shape:</label>
                         <input name="shape" type="text">
                         <br>
-                        
+                        <label for="color">Color:</label>
+                        <input name="color" type="text">
+                        <br>
                         <input type="submit" value="Book Appointment">
                         
                         <input name="service" type="hidden" value="<%= nailService %>">

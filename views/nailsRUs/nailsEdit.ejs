@@ -9,17 +9,8 @@
 <h1>Edit <%= oneNail.service %> Appointment </h1>
 
 <form action="/nails/<%= oneNail._id %>?_method=PUT" method="POST">
-    <label for="service">Service:</label>
-    <input name="service"  type="text" value="<%= oneNail.service %>">
-    <br>
     <label for="name">Name:</label>
     <input name="name"  type="text" value="<%= oneNail.name %>">
-    <br>
-    <label for="color">Color:</label>
-    <input name="color"  type="text" value="<%= oneNail.color %>">
-    <br>
-    <label for="shape">Shape:</label>
-    <input name="shape"  type="text" value="<%= oneNail.shape %>">
     <br>
     <label for="date">Date:</label>
     <input name="date"  type="text" value="<%= oneNail.date %>">
@@ -27,9 +18,17 @@
     <label for="time">Time:</label>
     <input name="time"  type="text" value="<%= oneNail.time %>">
     <br>
+    <label for="service">Service:</label>
+    <input name="service"  type="text" value="<%= oneNail.service %>">
+    <br>
+    <label for="shape">Shape:</label>
+    <input name="shape"  type="text" value="<%= oneNail.shape %>">
+    <br>
+    <label for="color">Color:</label>
+    <input name="color"  type="text" value="<%= oneNail.color %>">
+    <br>
     <input type="submit" value="Update Appointment">
 </form>
-
-    
+   
 </body>
 </html>
