@@ -5,31 +5,44 @@
 </head>
 <body class="nails-book">
     <!-- Form goes here  -->
-<%- include('../partials/logobar.ejs') %>
-<h1>Create a New Nail Appointment for <%= nailService %>
-</h1>
-<form action="/nails" method="POST">
-    <label for="name">Name:</label>
-    <input name="name" type="text">
-    <br>
+  
+    <%- include('../partials/logobar.ejs') %>
 
-    <label for="date">Date:</label>
-    <input name="date" type="text">
-    <br>
-    <label for="time">Time:</label>
-    <input name="time" type="text">
-    <br>
+    
+    
+    <div class="banner-area"></div>
+    
 
-    <label for="color">Color:</label>
-    <input name="color" type="text">
-    <br>
-    <label for="shape">Shape:</label>
-    <input name="shape" type="text">
-    <br>
-
-    <input type="submit" value="Book Appointment">
-
-    <input name="service" type="hidden" value="<%= nailService %>">
-</form>
+        <div class="content-area">
+            <div class="wrapper">
+                <h1>Create new appointment for a <%= nailService %></h1>
+            
+                <div class="form-area">
+                    <form action="/nails" method="POST">
+                        <label for="name">Name:</label>
+                        <input name="name" type="text">
+                        <br>
+                        
+                        <label for="date">Date:</label>
+                        <input name="date" type="text">
+                        <br>
+                        <label for="time">Time:</label>
+                        <input name="time" type="text">
+                        <br>
+                        
+                        <label for="color">Color:</label>
+                        <input name="color" type="text">
+                        <br>
+                        <label for="shape">Shape:</label>
+                        <input name="shape" type="text">
+                        <br>
+                        
+                        <input type="submit" value="Book Appointment">
+                        
+                        <input name="service" type="hidden" value="<%= nailService %>">
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
