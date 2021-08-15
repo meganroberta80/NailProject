@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>   
-    <title>All Nail Appointments</title>
+
+<head>
+    <title>🔮 All Appointments</title>
 </head>
 
 <body class="nails-index">
     <%- include('../partials/logobar.ejs') %>
-    <div class="container">
 
         <h2> All Nail Appointments </h2>
         <% for(let i=0; i < allNails.length; i++) { %>
-            <div class="card">
-                <div class="card-body">
-                    <a href="/nails/<%= allNails[i]._id %>">
-                        <h2>
-                            <%= allNails[i].name %>
-                        </h2>
-                    </a>
-                    <form action="/nails/<%= allNails[i]._id %>?_method=DELETE" method="POST">
-                        <input type="submit" value="Delete this Appointment">
-                    </form>
-                    
-                    <a href="/nails/<%= allNails[i]._id %>/edit">Edit this Appointment</a>
-                </div>
+            <div id="card-appointment">
+                <a href="/nails/<%= allNails[i]._id %>">
+                    <h2>
+                        <%= allNails[i].name %>
+                    </h2>
+                </a>
+
+                <form action="/nails/<%= allNails[i]._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete this Appointment">
+                </form>
+
+                <a href="/nails/<%= allNails[i]._id %>/edit">Edit this Appointment</a>
             </div>
-        <% } %>
-            
-            
-    </div>
+            <% } %>
+
+
+                </div>
 
 
 
