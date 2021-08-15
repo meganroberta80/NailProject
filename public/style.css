@@ -158,7 +158,7 @@ p {
     margin: 0%;
 }
 
-.form-area, #card-appointment {
+.form-area {
     border-radius: 5px;
     background-color: antiquewhite;
     /* background-image: url(img/glam5.jpeg);
@@ -212,14 +212,25 @@ nav {
     text-align: center;
 }
 
-#card-appointment {
+/* #card-appointment {
     background-color: white;
-}
+} */
 
 
 /* ------ nailsIndex.ejs ----- */
 
-
+.nails-index {
+    background-image: url(img/banner7.jpeg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Monserrat', 'Times New Roman';
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+    width: 100%;
+}
 
 
 
