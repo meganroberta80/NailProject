@@ -117,6 +117,15 @@ p {
 
 }
 
+.banner-area {
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    top: 100px;
+    background-image: url(img/banner2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
 .wrapper {
     display: flex;
     align-items: center;
@@ -126,22 +135,13 @@ p {
 
 }
 
-.banner-area {
-    width: 100%;
-    height: 500px;
-    position: fixed;
-    top: 100px;
-    background-image: url(img/marbleF.jpeg);
-    background-size: cover;
-    background-position: center;
-}
 
 .content-area {
     width: 100%;
     height: 1500px;
     position: relative;
     top: 450px;
-    background: #ddd;
+    
     
 }
 
@@ -164,6 +164,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: dimgrey;
 }
 
 input[type=text], select, #card-appointment {
@@ -211,7 +212,7 @@ nav {
 
 /* More code. */
 body {
-    background-image: url(/img/marble10.jpeg);
+    /* background-image: url(/img/marble04.jpeg); */
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
