@@ -1,132 +1,56 @@
-body {
-    background-image: url(/img/marble10.jpeg);
+/* CSS for each page */
+.index {
+    width: 100%;
+    height: 100vh;
+    background-image: url();
     background-position: center;
     background-size: cover;
-    box-sizing: border-box;
-    font-family: 'Monserrat', 'Times New Roman';
-    height: 100vh;
     padding-left: 8%;
     padding-right: 8%;
+    box-sizing: border-box;
     text-align: center;
-    width: 100%;
-}
-
-.index {
-
 }
 
 .nails-new {
-
-}
-
-.show {
-
-}
-
-.nails-book {
-
-}
-
-.nails-index {
-
-}
-
-.nails-edit {
-    
-}
-
-/* CSS for NailsBook.ejs  */
-.wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
-    margin: 0 auto;
-}
-.content-area {
-    width: 100%;
-    height: 1500px;
-    position: relative;
-}
-.content-area h1 {
-    font-size: 40px;
-    letter-spacing: 4px;
-    margin: 0%;
-    padding-top: 30px;
-}
-.form-area, #card-appointment {
-    border-radius: 5px;
-    padding: 20px;
-    width: 80%;
-}
-.form-area form, #card-appointment {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-input[type=text], select, #card-appointment {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 8px 0;
-    padding: 12px 20px;
-    width: 75%;
-}
-/* .banner-area {
-    width: 100%;
-    height: 500px;
-    position: fixed;
-    top: 100px;
-    background-image: url(img/marbleF.jpeg);
+    height: 100vh;
+    background-image: url(/img/marble10.jpeg);
+    background-position: center;
     background-size: cover;
-    background-position: center; 
-} */
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    text-align: center;
+}
 
 
 /* CSS for Elements */
+#logo {
+    font-family: 'WindSong', cursive;
+    font-size: 3em;
+}
+
 a {
     color: black;
     text-decoration: none;
 }
 
-#book-appointment {
-    background-image: url(/img/marbleF.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-
-.card {
-    border: 1px solid black; 
-    text-align: center;
-}
-
-#card-appointment {
-    background-color: white;
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
 }
 
 .col {
     flex-basis: 50%;
 }
 
-input[type=submit] {
-    width: 50%;
-    background-color: #e766afc1;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+h1 {
+    color:#0a0a0ab0; 
 }
 
-input[type=submit]:hover {
-    background-color: #e766af;
-}
-
-#logo {
-    font-family: 'WindSong', cursive;
-    font-size: 3em;
+p {
+    color: #0f0e0eb0;
 }
 
 .nailpic {
@@ -148,29 +72,6 @@ input[type=submit]:hover {
 .nailpic:hover {
     transform: translateY(-10px);
 }
-
-/* .navbar {
-    color:#0a0a0ab0; 
-    text-align: center;
-    text-decoration: none;
-} */
-
-.navbar-brand {
-    color:#0a0a0ab0; 
-    text-align: center;
-    text-decoration: none;
-}
-
-p {
-    color: #0f0e0eb0;
-}
-
-.row {
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
 
 /* CSS for nails-new pictures */
 #pic1 {
@@ -207,3 +108,135 @@ p {
     
 }
 
+
+
+/* CSS for NailsBook.ejs  */
+.nails-book {
+    background-color: rgb(248, 247, 233);
+    text-align: center;
+
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.banner-area {
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    top: 100px;
+    background-image: url(img/marbleF.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content-area {
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    top: 450px;
+    background: #ddd;
+    
+}
+
+.content-area h1 {
+    letter-spacing: 4px;
+    padding-top: 30px;
+    font-size: 40px;
+    margin: 0%;
+}
+
+.form-area, #card-appointment {
+    border-radius: 5px;
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 80%;
+
+}
+
+.form-area form, #card-appointment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text], select, #card-appointment {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 50%;
+    background-color: #d59abbee;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #d59abbee;
+  }
+  
+
+nav {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid black; 
+    text-align: center;
+}
+
+#card-appointment {
+    background-color: white;
+}
+
+
+
+
+
+/* More code. */
+body {
+    background-image: url(/img/marble10.jpeg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: 'Monserrat', 'Times New Roman';
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+    width: 100%;
+}
+
+#book-appointment {
+    background-image: url(/img/marbleF.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* .navbar {
+    color:#0a0a0ab0; 
+    text-align: center;
+    text-decoration: none;
+} */
+
+.navbar-brand {
+    color:#0a0a0ab0; 
+    text-align: center;
+    text-decoration: none;
+}
