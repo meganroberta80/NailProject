@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>🔮 Signup Page</title>
+</head>
+
+<body class="signup">
+    <%- include('../partials/logobar.ejs') %>
+
+    <h1>Sign Up for an Account</h1>
+
+    <!-- Create a form to take in a username and password. -->
+    <form action="/signup" method="POST">
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password">
+      <br>
+      <br>
+      <input type="submit">
+    </form>
+</body>
+
+</html>
