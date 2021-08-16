@@ -47,10 +47,12 @@ a {
 
 h1 {
     color:#0a0a0ab0; 
+    text-shadow: 0.02em 0 lightgray, 0 0.02em lightgray;
+  transition: transform 0.5s;
 }
 
 p {
-    color: #0f0e0eb0;
+    color: #817e7eb0;
 }
 
 .nailpic {
@@ -159,9 +161,6 @@ p {
 .form-area {
     border-radius: 5px;
     background-color: antiquewhite;
-    /* background-image: url(img/glam5.jpeg);
-    background-size: cover;
-    background-position: center;  */
     padding: 20px;
     width: 50%;
 
@@ -236,6 +235,11 @@ nav {
   margin: 0%;
 }
 
+.content-area2 p {
+  text-shadow: 0.02em 0 lightgray, 0 0.02em lightgray;
+  transition: transform 0.5s;
+  font-size: 23px;
+}
 
 /* ------ CSS for nailsIndex.ejs ----- */
 
@@ -246,7 +250,7 @@ nav {
   background-image: url(img/banner7.jpeg);
   background-position: center;
   background-repeat: no-repeat;
-  background-color: lavender;
+  background-color: #d6f1f3;
   background-size: 65%;
   padding-left: 8%;
   padding-right: 8%;
