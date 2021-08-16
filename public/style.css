@@ -168,14 +168,14 @@ p {
 
 }
 
-.form-area form, #card-appointment {
+.form-area form {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: dimgrey;
 }
 
-input[type=text], select, #card-appointment {
+input[type=text], select {
     width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -210,45 +210,62 @@ nav {
     text-align: center;
 }
 
-/* #card-appointment {
-    background-color: white;
-} */
 
+/* ------ CSS for show.ejs --------- */
 
-/* ------ nailsIndex.ejs ----- */
-
-.nails-index {
-    background-image: url(img/banner7.jpeg);
-    background-position: center;
-    background-size: cover;
-    box-sizing: border-box;
-    font-family: 'Monserrat', 'Times New Roman';
-    height: 100vh;
-    padding-left: 8%;
-    padding-right: 8%;
-    text-align: center;
-    width: 100%;
+.show {
+  background-color: rgb(228, 211, 233);
+  text-align: center;
 }
 
 
+.banner-show {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  top: 100px;
+  background-image: url(img/6nail.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-area2 h1 {
+  letter-spacing: 4px;
+  padding-top: 30px;
+  font-size: 40px;
+  margin: 0%;
+}
 
 
+/* ------ CSS for nailsIndex.ejs ----- */
 
 
+.nails-index {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/banner7.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: lavender;
+  background-size: 65%;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
 
+#card-appointment {
+  width: 55%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 7px solid #cfcec9;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-/* ---------- nailsEdit.ejs ----------- */
+/* ---------- CSS for nailsEdit.ejs ----------- */
 
 .nails-edit {
     background-color: #fadddd;
@@ -302,19 +319,6 @@ nav {
     text-align: center;
     text-decoration: none;
 }
-
-/* body {
-    background-image: url(/img/marble04.jpeg);
-    background-position: center;
-    background-size: cover;
-    box-sizing: border-box;
-    font-family: 'Monserrat', 'Times New Roman';
-    height: 100vh;
-    padding-left: 8%;
-    padding-right: 8%;
-    text-align: center;
-    width: 100%;
-} */
 
 
 /* ------- CSS for Carousel --------  */

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>🔮 Nail Appointment</title>
+    <title>Nail Appointment</title>
 </head>
 <body class="show">
     <%- include('./partials/logobar.ejs') %>
+<div class="banner-show">
+    <div class="content-area">
+        <div class="wrapper">
+            <h1>Appointment Confirmation</h1>
+            <p>An appointment is scheduled for <%= oneNail.date %> at <%= oneNail.time%> . </p>
+            <p>For a <%= oneNail.service %> with a nail shape of <%= oneNail.shape %> and color of <%= oneNail.color%>. </p> 
 
-<h1>Appointment Confirmation 🔮</h1>
-<p>An appointment is scheduled for <%= oneNail.date %> at <%= oneNail.time%> . </p>
-<p>For a <%= oneNail.service %> with a nail shape of <%= oneNail.shape %> and color of <%= oneNail.color%>. </p> 
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
