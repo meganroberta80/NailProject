@@ -7,27 +7,32 @@
 
 <body class="nails-index">
     <%- include('../partials/logobar.ejs') %>
-    
+    <div>class="banner-index"</div>
+        <div class="content-area">
+            <div class="wrapper">
 
-        <h2> All Nail Appointments </h2>
-        <% for(let i=0; i < allNails.length; i++) { %>
-            <div id="card-appointment">
-                <a href="/nails/<%= allNails[i]._id %>">
-                    <h2>
-                        <%= allNails[i].name %>
-                    </h2>
-                </a>
-
-                <form action="/nails/<%= allNails[i]._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Appointment">
-                </form>
-
-                <a href="/nails/<%= allNails[i]._id %>/edit">Edit Appointment</a>
+                <h2> All Nail Appointments </h2>
+                <% for(let i=0; i < allNails.length; i++) { %>
+                    <div id="card-appointment">
+                        <a href="/nails/<%= allNails[i]._id %>">
+                            <h2>
+                                <%= allNails[i].name %>
+                            </h2>
+                        </a>
+            
+                        <form action="/nails/<%= allNails[i]._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete Appointment">
+                        </form>
+            
+                        <a href="/nails/<%= allNails[i]._id %>/edit">Edit Appointment</a>
+                    </div>
+                    <% } %>
+            
+            
+                        </div>
             </div>
-            <% } %>
+        </div>
 
-
-                </div>
 
 
 

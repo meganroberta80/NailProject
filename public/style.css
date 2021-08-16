@@ -2,7 +2,7 @@
 .index {
     width: 100%;
     height: 100vh;
-    background-image: url();
+    background-image: url(img/background8.jpeg);
     background-position: center;
     background-size: cover;
     padding-left: 8%;
@@ -132,6 +132,7 @@ p {
     background-size: cover;
     background-position: center;
 }
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -210,6 +211,33 @@ nav {
 }
 
 
+
+/* ------ CSS for nailsIndex.ejs ----- */
+.nails-index {
+  background-color: rgb(215, 250, 250);
+  text-align: center;
+}
+
+.banner-index {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  top: 100px;
+  background-image: url(img/banner7.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+
+#card-appointment {
+  width: 55%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 7px solid #cfcec9;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
 /* ------ CSS for show.ejs --------- */
 
 .show {
@@ -239,34 +267,6 @@ nav {
   text-shadow: 0.02em 0 lightgray, 0 0.02em lightgray;
   transition: transform 0.5s;
   font-size: 23px;
-}
-
-/* ------ CSS for nailsIndex.ejs ----- */
-
-
-.nails-index {
-  width: 100%;
-  height: 100vh;
-  background-image: url(img/banner7.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #d6f1f3;
-  background-size: 65%;
-  padding-left: 8%;
-  padding-right: 8%;
-  box-sizing: border-box;
-  text-align: center;
-  
-}
-
-#card-appointment {
-  width: 55%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 7px solid #cfcec9;
-  border-radius: 20px;
-  box-sizing: border-box;
 }
 
 /* ---------- CSS for nailsEdit.ejs ----------- */
@@ -307,7 +307,7 @@ nav {
 /* More code. */
 
 #book-appointment {
-    background-image: url(/img/marbleF.jpeg);
+    background-image: url(img/bookbtn.jpeg);
     background-position: center;
     background-size: cover;
 }
@@ -435,19 +435,19 @@ nav {
   }
 
  #carousel__slide1 {
-  background-image: url(img/nails1.jpeg);
+  background-image: url(img/1nail.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 #carousel__slide2 {
-  background-image: url(img/nails2.jpeg);
+  background-image: url(img/3nail.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 #carousel__slide3 {
-  background-image: url(img/nails3.jpg);
+  background-image: url(img/01nail.jpeg);
   background-size: cover;
   background-position: center;
 }
