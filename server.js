@@ -16,7 +16,7 @@ app.set('view engine', 'ejs')
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
-app.use(session({secret: 'Random string!' }))
+app.use(session({secret: process.env.SESSION_SECRET }))
 
 ///////////// Controllers ///////////// 
 app.use('/nails', nailController)
@@ -24,11 +24,17 @@ app.use('/nails', nailController)
 
 /////// Routes ///////
 app.get('/', (req, res) => {
+  req.session.newProperty = 'some value'
+  
+  console.log(req.session)
+
   res.render('index.ejs');
 })
 
 // Signup Route - Shows a Signup Form
 app.get('/signup', (req, res) => {
+  console.log(req.session)
+
   res.render('auth/signup.ejs');
 });
 
