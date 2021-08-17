@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>🔮 Create Appointment</title>
 </head>
+
 <body class="nails-book">
-    <!-- Form goes here  -->
-  
     <%- include('../partials/logobar.ejs') %>
-    
-    <div class="banner-book"></div>
+
+        <div class="banner-book"></div>
         <div class="content-area">
             <div class="wrapper">
-                <h1>Create new appointment for a <%= nailService %></h1>
-            
+                <h1>Create new appointment for a <%= nailService %>
+                </h1>
+
                 <div class="form-area">
                     <form action="/nails" method="POST">
                         <label for="name">Name:</label>
@@ -31,11 +32,12 @@
                         <input name="color" type="text">
                         <br>
                         <input type="submit" value="Book Appointment">
-                        
+
                         <input name="service" type="hidden" value="<%= nailService %>">
                     </form>
                 </div>
             </div>
         </div>
 </body>
+
 </html>

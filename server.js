@@ -38,6 +38,7 @@ app.get('/signup', (req, res) => {
   res.render('auth/signup.ejs');
 });
 
+
 // Sign up a New User
 app.post('/signup', (req, res) => {
   // 1. Take in the username and password from the form.
@@ -51,6 +52,7 @@ app.post('/signup', (req, res) => {
     res.redirect('/login')
   })
 })
+
 
 // Login Route - Shows a Login Form
 app.get('/login', (req, res) => {
@@ -75,10 +77,14 @@ app.post('/login', (req, res) => {
     }
 
     // 3. Track the user in a cookie on their browser.
-    
-    res.send('You tried to log in')
+    req.session.currentUser = foundUser 
+
+    console.log(req.session)
+
+    res.redirect('/nails')
   })
 })
+
 
 // Logout Route
 app.get('/logout', (req, res) => {

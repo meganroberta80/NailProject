@@ -7,19 +7,21 @@ const router = express.Router();
 
 // Index Route (Service Selection Page)
 router.get('/', (req, res) => {
-    db.Nails.find({}, (err, allNails) => {
-        if (err) return console.log(err);
-        
-        
-        res.render('nailsRUs/nailsIndex.ejs', {
-            allNails: allNails
-    });
+
+    db.Nails.find({ user: req.session.currentUser._id }, (err, allNails) => {
+        if (err) return console.log(err)
+
+        res.render('index.ejs', { allNails: allNails })
     })
 })
 
 
 // New Route (Create Appointment Page)
 router.get('/new', (req, res) => {
+    // if user is not logged in, send them to the login page
+    if (!req.session.currentUser) {
+        return res.redirect('/login')
+    }
     res.render('nailsRUs/nailsNew.ejs')
 })
 
@@ -32,8 +34,8 @@ router.get('/new/:nailService', (req, res) => {
 router.get('/:nailId', (req, res) => {
     db.Nails.findById(req.params.nailId, (err, foundNail) => {
         if (err) return console.log(err);
-        
-        
+
+
         res.render('show.ejs', { oneNail: foundNail })
     })
 })
@@ -43,9 +45,9 @@ router.get('/:nailId', (req, res) => {
 router.post('/', (req, res) => {
     db.Nails.create(req.body, (err, createdNails) => {
         if (err) return console.log(err);
-        
+
         //console.log(req.body)
-        
+
         res.redirect('/nails');
     });
 })
@@ -65,19 +67,19 @@ router.get('/:nailId/edit', (req, res) => {
 router.put('/:nailId', (req, res) => {
     db.Nails.findByIdAndUpdate(req.params.nailId, req.body, (err, updateNail) => {
         if (err) return console.log(err);
-        
+
         res.redirect('/nails/' + req.params.nailId);
     })
 })
 
 
 // Delete Route (link/button)
-router.delete('/:nailId',(req, res) => {
+router.delete('/:nailId', (req, res) => {
     db.Nails.findByIdAndDelete(req.params.nailId, (err) => {
         if (err) return console.log(err);
         res.redirect('/nails');
     })
-    
+
 })
 
 module.exports = router;

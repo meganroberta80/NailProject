@@ -7,7 +7,11 @@ const nailSchema = new mongoose.Schema({
     color: { type: String },
     shape: { type: String },
     date: { type: String },
-    time: { type: String }
+    time: { type: String },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 // The Model
