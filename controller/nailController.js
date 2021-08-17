@@ -8,10 +8,10 @@ const router = express.Router();
 // Index Route (Service Selection Page)
 router.get('/', (req, res) => {
 
-    db.Nails.find({ user: req.session.currentUser._id }, (err, allNails) => {
+    db.Nails.find({ user: req.session.currentUser }, (err, allNails) => {
         if (err) return console.log(err)
 
-        res.render('index.ejs', { allNails: allNails })
+        res.render('nailsRUs/nailsIndex.ejs', { allNails: allNails })
     })
 })
 
@@ -24,6 +24,7 @@ router.get('/new', (req, res) => {
     }
     res.render('nailsRUs/nailsNew.ejs')
 })
+
 
 router.get('/new/:nailService', (req, res) => {
     res.render('nailsRUs/nailsBook.ejs', { nailService: req.params.nailService })
